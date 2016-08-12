@@ -17,6 +17,7 @@
     <% @notes.each do |note| %>
       <tr>
         <td><%= note.title %></td>
+        <br >
         <td><%= note.text %></td>
         <td><%= link_to 'Show', note %></td>
         <td><%= link_to 'Edit', edit_note_path(note) %></td>
