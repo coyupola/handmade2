@@ -2,8 +2,17 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :notes
+  # about page
   get 'about' => 'about#show'
+  # root path
   root'top#index'
+  #user notebook works show
+  get 'works' => 'works#index'
+  #user notebook works post view
+  get 'works/new' => 'works#new'
+  # user notebool works post
+  post 'works' => 'works#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
